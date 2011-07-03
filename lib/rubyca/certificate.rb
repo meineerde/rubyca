@@ -61,8 +61,9 @@ module RubyCA
                   'ST' => :state,
                   'L' => :location,
                   'O' => :organization,
-                  'OU' => :organizational_unit,
+                  'OU' => :ou,
                   'emailAddress' => :email,
+                  'name' => :name,
                   'CN' => :cn
                  }
     DN_ALIASES.each_pair do |field, method_name|

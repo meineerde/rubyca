@@ -4,7 +4,7 @@ describe RubyCA::Certificate do
   before do
     @cert = RubyCA::Certificate.new({
       :serial => "02",
-      :dn => "/C=DE/ST=Berlin/L=Berlin/O=Examplicon Ltd./CN=clerk_desktop.example.com/name=Johnny Clerk/emailAddress=clerk@example.com",
+      :dn => "/C=DE/ST=Berlin/L=Berlin/O=Examplicon Ltd./OU=Stuffers/CN=clerk_desktop.example.com/name=Johnny Clerk/emailAddress=clerk@example.com",
     })
   end
 
@@ -83,6 +83,14 @@ describe RubyCA::Certificate do
 
       @cert.dn['CN'].should == "clerk_desktop.example.com"
       @cert.dn['CN'].should eql(@cert.cn)
+
+      @cert.country.should == "DE"
+      @cert.email.should == "clerk@example.com"
+      @cert.location.should == "Berlin"
+      @cert.name.should == "Johnny Clerk"
+      @cert.state.should == "Berlin"
+      @cert.organization.should == "Examplicon Ltd."
+      @cert.ou.should == "Stuffers"
     end
   end
 end
