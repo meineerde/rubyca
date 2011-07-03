@@ -4,12 +4,12 @@ require "rubyca/version"
 
 Gem::Specification.new do |s|
   s.name        = "rubyca"
-  s.version     = Rubyca::VERSION
+  s.version     = RubyCA::VERSION
   s.authors     = ["Holger Just"]
   s.email       = ["hjust@meine-er.de"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/meineerde/rubyca"
+  s.summary     = "A simple certificate authority"
+  s.description = "This project aims to provide all necessary tools for embedding a simple certificate authority (CA) into your applications."
 
   s.rubyforge_project = "rubyca"
 
