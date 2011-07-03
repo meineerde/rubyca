@@ -1,0 +1,15 @@
+= Ruby CA
+
+This project aims to provide all necessary tools for embedding a simple
+certificate authority (CA) into your applications. <b>It is not targeted towards
+an end-user.</b> However, it is probably rather easy to build a user-facing
+front-end around it.
+
+== Usage
+
+*TODO*
+
+== License
+
+This project is provided under a MIT license. Please see <tt>LICENSE.txt</tt>
+for more information.
