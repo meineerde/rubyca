@@ -9,6 +9,11 @@ front-end around it.
 
 *TODO*
 
+=== Testing
+
+    bundle install
+    bundle exec rake
+
 == License
 
 This project is provided under a MIT license. Please see <tt>LICENSE.txt</tt>
