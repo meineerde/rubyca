@@ -32,9 +32,17 @@ module RubyCA
         end
       end
 
-      (Certificate::DN_ALIASES.values + %w(serial)).each do |method|
-        define_method :"certificates_by_#{method}" do |filter|
-          certificates.select{ |cert| cert.send(:"#{method}") == filter }
+      def save
+        File.open(@database, File::WRONLY|File::APPEND|File::CREAT, 0644) do |f|
+          f.flock File::LOCK_EX
+          f.truncate 0
+
+          certificates.select(&:saved?).sort_by(&:serial).each do |crt|
+            line = [crt.status, crt.expire_date, crt.revoke_date,
+                    crt.serial, crt.certificate_filenname, crt.dn].join("\t")
+            f.write("#{line}\n")
+          end
+          f.flush
         end
       end
 

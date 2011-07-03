@@ -29,4 +29,10 @@ describe RubyCA::Index::FileIndex do
       certs[1].serial.should eql("02")
     end
   end
+
+  describe "saving" do
+    it "should save" do
+      pending "Test the index save!"
+    end
+  end
 end

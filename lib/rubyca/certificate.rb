@@ -75,5 +75,10 @@ module RubyCA
     def verify(fix_me = false)
       # TODO: verify all fields from key file
     end
+
+    def saved?
+      # TODO: true if actually saved in the file system
+      true
+    end
   end
 end
