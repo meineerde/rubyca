@@ -1,5 +1,11 @@
-require "rubyca/version"
+require 'date'
+require 'openssl'
 
-module Rubyca
+require 'rubyca/certificate'
+require 'rubyca/index'
+
+require 'rubyca/version'
+
+module RubyCA
   # Your code goes here...
 end
