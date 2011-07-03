@@ -5,6 +5,11 @@ certificate authority (CA) into your applications. <b>It is not targeted towards
 an end-user.</b> However, it is probably rather easy to build a user-facing
 front-end around it.
 
+In its first version, the project simply serves as a backend to the
+{openvpn-admin}[https://github.com/meineerde/openvpn-admin]. Thus some
+functionality to make it usable as a generic CA (for e.g. webserver SSL
+certificates) might be missing.
+
 == Usage
 
 *TODO*
